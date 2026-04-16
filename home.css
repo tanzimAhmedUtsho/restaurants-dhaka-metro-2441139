@@ -1,0 +1,241 @@
+/* --- মূল ডিজাইন সেটআপ --- */
+:root {
+  --primary-color: #8b0000; /* রাজকীয় লাল */
+  --accent-color: #ffd700; /* সোনালী */
+  --text-light: #ffffff;
+  --text-dark: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #fffaf5;
+  scroll-behavior: smooth;
+}
+
+/* --- নেভিগেশন বার (Navbar) --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8%; /* প্যাডিং সামান্য কমানো হয়েছে লোগোর জন্য */
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-logo {
+  height: 65px; /* লোগোর প্রফেশনাল সাইজ */
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.1);
+}
+
+.logo-text {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.logo-text span {
+  color: #444;
+  font-size: 16px;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.order-btn {
+  background: var(--primary-color);
+  color: white !important;
+  padding: 10px 22px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #b00000;
+  box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3);
+}
+
+/* --- হিরো সেকশন (Hero) --- */
+.hero {
+  height: 85vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://unsplash.com");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+.hero-content h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 35px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.4s;
+  display: inline-block;
+  margin: 5px;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #b00000;
+  transform: translateY(-2px);
+}
+.btn-secondary:hover {
+  background: white;
+  color: black;
+}
+
+/* --- মেনু সেকশন (Menu) --- */
+.menu-preview {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.menu-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.menu-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+/* --- ফুটার (Footer) --- */
+footer {
+  background: var(--text-dark);
+  color: #ddd;
+  text-align: center;
+  padding: 40px;
+  margin-top: 50px;
+}
+
+/* --- রেসপনসিভ (Mobile) --- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .nav-links {
+    display: none; /* মোবাইলে হ্যামবার্গার মেনু যোগ করার জন্য এটি লুকানো হয়েছে */
+  }
+  .logo-text {
+    font-size: 18px;
+  }
+}
