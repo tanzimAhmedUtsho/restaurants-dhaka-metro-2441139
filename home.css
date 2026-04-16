@@ -165,6 +165,38 @@ body {
   color: black;
 }
 
+/* মালিকের নামের স্টাইল */
+.owner-name {
+  font-size: 1.1rem;
+  color: var(--accent-color); /* সোনালী রঙ */
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.owner-name span {
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 2px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-content b {
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+
+/* ফেসবুক লিঙ্কের স্টাইল */
+.facebook-link {
+  text-decoration: none; /* নিচের দাগ সরানোর জন্য */
+  color: inherit; /* আগের টেক্সট কালার বজায় রাখার জন্য */
+  transition: 0.3s ease;
+}
+
+.facebook-link:hover span {
+  color: #1877f2; /* মাউস নিলে ফেসবুকের নীল রঙ হবে */
+  border-bottom-color: #1877f2; /* নিচের বর্ডারও নীল হবে */
+}
+
 /* --- মেনু সেকশন (Menu) --- */
 .menu-preview {
   padding: 80px 10%;
