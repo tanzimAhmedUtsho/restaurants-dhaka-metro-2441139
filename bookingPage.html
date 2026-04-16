@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>টেবিল বুকিং | Dhaka Metro 2441139</title>
+    <!-- নিশ্চিত করুন ফাইলের নাম bookingPage.css আছে -->
+    <link rel="stylesheet" href="bookingPage.css" />
+    <!-- গুগল ফন্ট এবং ফন্ট-অসাম (আইকন) এর সঠিক লিঙ্ক -->
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cloudflare.com" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="image/logo.png" alt="Logo" class="nav-logo" />
+        </a>
+        <div class="logo-text">DHAKA METRO <span>2441139</span></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">হোম</a></li>
+        <li><a href="home.html">মেনু</a></li>
+        <li><a href="aboutMe.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="bookingPage.html" class="order-btn">টেবিল বুকিং</a></li>
+      </ul>
+    </nav>
+
+    <section class="booking-hero">
+      <div class="hero-overlay">
+        <h1>আপনার মুহূর্তগুলো হোক স্মরণীয়</h1>
+        <p>
+          স্বাদের আভিজাত্যে প্রিয়জনের সাথে একটি সন্ধ্যা কাটাতে আজই বুক করুন।
+        </p>
+        <div class="urgency-tag">
+          <i class="fas fa-fire"></i> আজকের জন্য মাত্র ৩টি টেবিল খালি আছে!
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section">
+      <div class="container">
+        <div class="offer-banner">
+          <i class="fas fa-gift"></i>
+          <span
+            >অনলাইনে বুকিং করলেই পাচ্ছেন আপনার পছন্দের ডেজার্টে
+            <b>১০% ছাড়!</b></span
+          >
+        </div>
+
+        <div class="booking-wrapper">
+          <div class="booking-info">
+            <h2>যোগাযোগ</h2>
+            <p><i class="fas fa-phone-alt"></i> +৮৮০ ১৭৫৬৪৬৭৬৭০</p>
+            <p><i class="fas fa-map-marker-alt"></i> ঢাকা, বাংলাদেশ</p>
+            <div class="opening-hours">
+              <h3>খোলা থাকার সময়</h3>
+              <p>প্রতিদিন: ১০ AM - ১১ PM</p>
+            </div>
+          </div>
+
+          <div class="booking-form-box">
+            <form id="res-form">
+              <div class="input-row">
+                <div class="input-group">
+                  <label>আপনার নাম</label>
+                  <input type="text" placeholder="নাম" required />
+                </div>
+                <div class="input-group">
+                  <label>ফোন নম্বর</label>
+                  <input type="tel" placeholder="০১XXXXXXXXX" required />
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-group">
+                  <label>তারিখ</label>
+                  <input type="date" required />
+                </div>
+                <div class="input-group">
+                  <label>পছন্দের জায়গা</label>
+                  <select>
+                    <option>যেকোনো জায়গা</option>
+                    <option>উইন্ডো সিট</option>
+                    <option>ফ্যামিলি কর্নার</option>
+                    <option>কাপল ডাইনিং</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-group">
+                <label>বিশেষ কোনো অনুরোধ (জন্মদিন/বার্ষিকী?)</label>
+                <textarea
+                  placeholder="আপনার বিশেষ কোনো চাহিদা থাকলে লিখুন..."
+                ></textarea>
+              </div>
+              <button type="button" class="submit-btn" onclick="showSuccess()">
+                বুকিং নিশ্চিত করুন
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- সংশোধিত গুগল ম্যাপ সেকশন -->
+    <section class="map-section">
+      <div class="container">
+        <h2 class="section-title">আমাদের অবস্থান</h2>
+        <!-- কাজ করার মতো সঠিক Embed লিঙ্ক এখানে বসানো হয়েছে -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.0691747796154!2d89.02256489923542!3d23.673484079210684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fec1bc05265aab%3A0x2dcc2f17b1fa5c60!2z4Kau4KeB4KaV4KeN4Kak4Ka-4KawIOCmrOCmv-CmtuCnjeCmrOCmvuCmuCDgprLgp4fgpqzgp4Hgpqzgpr7gppfgpr7gpqg!5e0!3m2!1sen!2sbd!4v1776323445265!5m2!1sen!2sbd"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <div id="success-popup" class="popup">
+      <div class="popup-content">
+        <i class="fas fa-check-circle"></i>
+        <h2>ধন্যবাদ</h2>
+        <p>আপনার টেবিল বুকিং সফল হয়েছে। আমরা শীঘ্রই কল করে কনফার্ম করবো।</p>
+        <button onclick="closePopup()">বন্ধ করুন</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; ২০২৪ ঢাকা মেট্রো ২৪৪১১৩৯ | প্রতিষ্ঠাতা: তানজীম আহমেদ উৎস</p>
+    </footer>
+
+    <script>
+      function showSuccess() {
+        document.getElementById("success-popup").style.display = "flex";
+      }
+      function closePopup() {
+        document.getElementById("success-popup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
