@@ -255,11 +255,89 @@ body {
 
 /* Footer */
 footer {
-  background: var(--text-dark);
-  color: #ddd;
-  text-align: center;
-  padding: 40px;
+  background: #111;
+  color: #bbb;
+  padding: 60px 8% 20px;
   margin-top: 50px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  font-family: "Playfair Display", serif;
+  color: var(--accent-color);
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  color: var(--accent-color);
+  padding-left: 8px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  background: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.footer-col i {
+  margin-right: 10px;
+  color: var(--accent-color);
+  width: 20px;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  font-size: 13px;
+  color: #666;
 }
 
 @media (max-width: 768px) {
