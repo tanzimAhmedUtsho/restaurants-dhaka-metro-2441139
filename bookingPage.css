@@ -82,7 +82,7 @@ body {
   height: 45vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://unsplash.com");
+    url("/image/booking\ BG.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
