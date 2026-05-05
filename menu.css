@@ -77,7 +77,7 @@ body {
   height: 60vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-    url("/image/food BG.jpg");
+    url("https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=2000&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
