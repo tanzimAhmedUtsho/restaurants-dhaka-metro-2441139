@@ -342,10 +342,17 @@ footer {
   transform: translateY(-5px);
 }
 
-.footer-col i {
+.footer-col p i {
   margin-right: 10px;
   color: var(--accent-color);
   width: 20px;
+  text-align: center;
+}
+
+.footer-socials a i {
+  margin: 0;
+  width: auto;
+  color: inherit;
 }
 
 .footer-bottom {

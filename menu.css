@@ -345,10 +345,19 @@ footer {
   transform: translateY(-5px);
 }
 
-.footer-col i {
+.footer-col p i {
+  /* Specific for icons in contact info paragraphs */
   margin-right: 10px;
   color: var(--accent-color);
   width: 20px;
+  text-align: center; /* Helps center smaller icons within the 20px width */
+}
+
+.footer-socials a i {
+  /* Ensure social icons are perfectly centered and use parent's color */
+  margin: 0; /* Remove any default or inherited margins */
+  width: auto; /* Let icon take its natural width */
+  color: inherit; /* Inherit color from the 'a' tag */
 }
 
 .footer-bottom {
