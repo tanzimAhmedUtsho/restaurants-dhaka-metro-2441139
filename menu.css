@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #8b0000;
+  --accent-color: #ffd700;
+  --text-dark: #222;
+  --bg-light: #fffaf5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8%;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.nav-logo {
+  height: 65px;
+  width: auto;
+}
+.logo-text {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.logo-text span {
+  color: #444;
+  font-size: 16px;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 10px;
+  margin-left: 5px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  margin-left: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+.order-btn {
+  background: var(--primary-color);
+  color: white !important;
+  padding: 10px 22px;
+  border-radius: 5px;
+}
+
+/* Menu Header */
+.menu-header {
+  height: 40vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("image/restaurant design.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.menu-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+}
+
+/* Menu Grid */
+.menu-gallery {
+  padding: 60px 8%;
+}
+.section-title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.menu-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.menu-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.card-details {
+  padding: 20px;
+  text-align: center;
+}
+.card-details h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.price {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background: var(--text-dark);
+  color: #ddd;
+  text-align: center;
+  padding: 40px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-header h1 {
+    font-size: 2.5rem;
+  }
+}
