@@ -98,6 +98,17 @@ body {
   box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3);
 }
 
+#check {
+  display: none;
+}
+
+.checkbtn {
+  font-size: 28px;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: none;
+}
+
 /* --- হিরো সেকশন (Hero) --- */
 .hero {
   height: 85vh;
@@ -369,10 +380,30 @@ footer {
   .hero-content h1 {
     font-size: 2.5rem;
   }
+  .checkbtn {
+    display: block;
+  }
   .nav-links {
-    display: none; /* মোবাইলে হ্যামবার্গার মেনু যোগ করার জন্য এটি লুকানো হয়েছে */
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 85px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    flex-direction: column;
+    padding-top: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  }
+  .nav-links li {
+    margin: 20px 0;
+    margin-left: 0;
   }
   .logo-text {
     font-size: 18px;
+  }
+  #check:checked ~ .nav-links {
+    left: 0;
   }
 }
